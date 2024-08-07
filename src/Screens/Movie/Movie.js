@@ -45,6 +45,9 @@ const Movie = ({ route, navigation }) => {
         navigation.navigate('Movie', { item });
         navigation.replace('Movie', { item });
     };
+    const handleNavigateToTickets = (movieName) => {
+    navigation.navigate('Tickets', { movieName });
+  };
     return (
         <View style={styles.project}>
             <View style={styles.menu}>
@@ -192,7 +195,7 @@ const Movie = ({ route, navigation }) => {
                 </View>
             </ScrollView>
             <View style={{ backgroundColor: 'rgba(68, 89, 109, 0.6)', justifyContent: 'center', alignItems: 'center', width: 360, height: 40 }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => handleNavigateToTickets(item.name)}>
                     <View style={{ backgroundColor: 'red', width: 260, height: 25, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }}>
                         <Text style={{ color: 'white', fontWeight: 'bold' }}>Đặt vé</Text>
                     </View>

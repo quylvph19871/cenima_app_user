@@ -23,6 +23,11 @@ const YoutubePlayer = ({ route, navigation }) => {
         { id: '10', name: 'The Avengers', genre: 'Action', imageUri: 'https://static.turbosquid.com/Preview/2015/07/01__07_00_44/d00.jpg51979e6b-755c-4f03-9a16-d8114f0e2058Zoom.jpg' },
         // Thêm các bộ phim khác vào đây
     ];
+
+
+    const handleNavigateToTickets = (movieName) => {
+        navigation.navigate('Tickets', { movieName });
+      };
     return (
         <View style={styles.Project}>
             <View style={styles.menu}>
@@ -77,7 +82,7 @@ const YoutubePlayer = ({ route, navigation }) => {
                 </View>
             </ScrollView>
             <View style={{ backgroundColor: 'rgba(68, 89, 109, 0.6)', justifyContent: 'center', alignItems: 'center', width: 360, height: 40, zIndex: 1 }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => handleNavigateToTickets(item.name)}>
                     <View style={{ backgroundColor: 'red', width: 260, height: 25, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }}>
                         <Text style={{ color: 'white', fontWeight: 'bold' }}>Đặt vé</Text>
                     </View>

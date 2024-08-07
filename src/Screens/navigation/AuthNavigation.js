@@ -11,6 +11,10 @@ import Movie from '../Movie/Movie';
 import HeartButton from '../Video';
 import Moviereview from '../Movie/Moviereview';
 import Searchmovie from '../Movie/Searchmovie';
+import Tickets from '../Tickets/Tickets';
+import Ticketsmovie from '../Tickets/Ticketsmovie';
+import Ticketsfoods from '../Tickets/Ticketsfoods';
+import Ticketsmonneys from '../Tickets/Ticketsmonneys';
 
 const Auth = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -59,9 +63,37 @@ const AuthNavigation = () => {
           { headerShown: false }
         }
       />
-      <Auth.Screen
+       <Auth.Screen
         name='Moviereview'
         component={Moviereview}
+        options={
+          { headerShown: false }
+        }
+      />
+      <Auth.Screen
+        name='Tickets'
+        component={Tickets}
+        options={
+          { headerShown: false }
+        }
+      />
+       <Auth.Screen
+        name='Ticketsmovie'
+        component={Ticketsmovie}
+        options={
+          { headerShown: false }
+        }
+      />
+       <Auth.Screen
+        name='Ticketsfoods'
+        component={Ticketsfoods}
+        options={
+          { headerShown: false }
+        }
+      />
+       <Auth.Screen
+        name='Ticketsmonneys'
+        component={Ticketsmonneys}
         options={
           { headerShown: false }
         }

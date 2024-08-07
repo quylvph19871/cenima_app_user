@@ -70,8 +70,8 @@ def enableProguardInReleaseBuilds = false
 def jscFlavor = 'org.webkit:android-jsc:+'
 
 project.ext.react = [
-    entryFile: "index.js",
-    enableHermes: false  // set to true to enable Hermes on Android
+        entryFile: "index.js",
+        enableHermes: false  // set to true to enable Hermes on Android
 ]
 
 android {

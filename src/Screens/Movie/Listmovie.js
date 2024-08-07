@@ -58,6 +58,10 @@ const Listmovie = ({ navigation }) => {
         navigation.navigate('Movie', { item });
     };
 
+    const handleNavigateToTickets = (movieName) => {
+        navigation.navigate('Tickets', { movieName });
+      };
+
     const sortedMovies = dataListmovie.sort((a, b) => b.votes - a.votes);
     const topMovies = sortedMovies.slice(0, 6);
     const noTopMovies = sortedMovies.slice(6,10);
@@ -170,7 +174,7 @@ const Listmovie = ({ navigation }) => {
                                         </View>
                                     </TouchableOpacity>
                                     <View style={{ backgroundColor: 'rgba(0, 178, 255, 1)', marginLeft: 70, borderRadius: 10, width: 80, height: 25, justifyContent: 'center', alignItems: 'center', borderWidth: 2, borderColor: 'white', marginTop: 70 }}>
-                                        <TouchableOpacity>
+                                        <TouchableOpacity onPress={() => handleNavigateToTickets(item.name)}>
                                             <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold', padding: 1 }}>Đặt vé</Text>
                                         </TouchableOpacity>
                                     </View>

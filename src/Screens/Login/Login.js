@@ -7,6 +7,9 @@ const Login = ( {navigation} ) => {
   const handleRegister = () => {
     navigation.navigate('Register')
   }
+  const handleMovie = () => {
+    navigation.navigate('Listmovie')
+  }
   return (
     <SafeAreaView style={styles.login_project}>
       <StatusBar barStyle="light-content"></StatusBar>
@@ -43,7 +46,7 @@ const Login = ( {navigation} ) => {
             </View>
           </View>
           <View style={styles.login_button}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={handleMovie}>
               <Text style={styles.login_text}>Login</Text>
             </TouchableOpacity>
           </View>
