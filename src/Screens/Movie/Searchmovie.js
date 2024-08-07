@@ -35,11 +35,11 @@ const Searchmovie = ({ navigation }) => {
   return (
     <View style={styles.project}>
       <View style={styles.menu}>
-                <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Image source={require('../img/arrow-small-left.png')} style={styles.img_menu} />
-                </TouchableOpacity>
-                <Text style={styles.text}>Movie</Text>
-            </View>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Image source={require('../img/arrow-small-left.png')} style={styles.img_menu} />
+        </TouchableOpacity>
+        <Text style={styles.text}>Movie</Text>
+      </View>
       <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
         <View style={{ flexDirection: 'row', backgroundColor: 'rgba(98, 131, 161, 1)', width: 350, height: 35, borderRadius: 8, borderWidth: 1, borderColor: 'rgba(121, 110, 177, 1)' }}>
           <View>
@@ -105,15 +105,15 @@ const styles = StyleSheet.create({
     // left: 10,
     // backgroundColor: 'rgba(248, 94, 94, 1)',
     height: 40
-},
-img_menu: {
+  },
+  img_menu: {
     width: 20,
     height: 20,
     marginRight: 5,
     left: 10
-},
-text: {
+  },
+  text: {
     color: 'white',
     left: 10,
-},
+  },
 })
